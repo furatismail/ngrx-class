@@ -1,14 +1,14 @@
 <div class="apple-form">
   <h1>Parking calculator & booking</h1>
-  <form>
+  <form (submit)="onSubmit($event)">
     <div class="form-group">
       <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" />
+      <input type="text" id="fullname" [field]="carForm.fullname" />
     </div>
 
     <div class="form-group">
       <label for="floor">Floor</label>
-      <select id="floor">
+      <select id="floor" [field]="carForm.floor">
         <option value="" disabled selected>Select your floor</option>
         <option>1</option>
         <option>2</option>
@@ -21,19 +21,19 @@
       <label>Type of Car</label>
       <div class="radio-group">
         <div>
-          <input type="radio" id="small" name="carType" value="Small personal car" />
+          <input [field]="carForm.carType" type="radio" id="small" value="Small personal car" />
           <label for="small">Small personal car</label>
         </div>
         <div>
-          <input type="radio" id="medium" name="carType" value="Medium car (SUV)" />
+          <input [field]="carForm.carType" type="radio" id="medium" value="Medium car (SUV)" />
           <label for="medium">Medium car (SUV)</label>
         </div>
         <div>
-          <input type="radio" id="big" name="carType" value="Bigger car (minivan)" />
+          <input [field]="carForm.carType" type="radio" id="big" value="Bigger car (minivan)" />
           <label for="big">Bigger car (minivan)</label>
         </div>
         <div>
-          <input type="radio" id="bus" name="carType" value="Bus" />
+          <input [field]="carForm.carType" type="radio" id="bus" value="Bus" />
           <label for="bus">Bus</label>
         </div>
       </div>
