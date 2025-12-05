@@ -1,16 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Car } from '../../shared/interfaces/car.interface';
 import { Observable, delay, of } from 'rxjs';
-import { ParkingRecord } from '../../shared/interfaces/parking-record.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ParkingCalculatorService {
 
-  calculate(payload: Car): Observable<ParkingRecord[]> {
+  calculate(payload: any): Observable<any[]> {
     // Mock data based on the payload
-    const mockOffers: ParkingRecord[] = [
+    const mockOffers: any[] = [
       {
         id: '1',
         createdAt: new Date().toISOString(),
